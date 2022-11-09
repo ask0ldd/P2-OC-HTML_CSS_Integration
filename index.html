@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/main.css">
+</head>
+<body>
+
+<header>
+    <div id="logo">
+        <img src="./images/logo/Booki.png">
+    </div>
+    <nav>
+        <div><a class="link" href="#">Hébergements</a></div>
+        <div><a class="link" href="#">Activités</a></div>
+    </nav>
+</header>
+<!--<div style="position:absolute; top:54px; width:100%; height:2px; background-color: blue;"></div>-->
+<div id="filter-container">
+    <h2 class="mgtop-2rem">Trouvez votre hébergement pour des vacances de rêve</h2> <!-- h2 being by default closest to the size on the mockup-->
+    <span style="display:block; line-height:2.5rem;">En plein centre-ville ou en pleine nature</span>
+    <div id="searchLocation" style="width:440px; height:48px; display:flex;margin-top:0.5rem;">
+        <div style="background-color:var(--grey); border-radius: 15px 0px 0px 15px; width:48px;display:flex; justify-content:center; align-items: center;"><img src="./icons/location.svg"/></div>
+        <div style="padding:0px 24px; flex-grow: 1; display:flex; border:solid var(--grey); border-width: 1px 0px 1px 0px; align-items: center; font-weight:700;">Marseille, France</div>
+        <div class="btn-icon">LP</div>
+        <div class="btn-text">Rechercher</div>
+    </div>
+    <div id="filterBar" style="height:48px; display:flex; margin-top:2rem; font-weight:700;"> <!--- remplacer par formulaire -->
+        <div style="display:flex; justify-content:center; align-items: center; ">Filtres</div>
+        <div class="filterButton"><img src="./icons/bill.svg" style="margin-right:12px;"/>Économique</div>
+        <div class="filterButton"><img src="./icons/bill.svg" style="margin-right:12px;"/>Familial</div>
+        <div class="filterButton"><img src="./icons/bill.svg" style="margin-right:12px;"/>Romantique</div>
+        <div class="filterButton"><img src="./icons/bill.svg" style="margin-right:12px;"/>Animaux autorisés</div>
+    </div>
+    <span id="infoBar" style="display:flex; line-height:2rem; margin-top: 2rem;"><img src="./icons/info.svg" style="margin-right:12px;"/>Plus de 500 logements sont disponibles dans cette ville</span>
+</div>
+
+<section id="rentalsResults"> <!-- rental-->
+    <div style="padding:40px 40px 40px 40px; width:880px; background-color:var(--grey); border-radius: 20px;">
+        <h2>Hébergements à Marseille</h2>
+        <div id="rentalsContainer"> <!-- article -->
+            <a class="link" href="#">  <!-- CARD -->
+                <div class="rentalcard" >
+                    <img class="card-img" src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"/>
+                    <span class="rentalcard__heading" style="margin:6px 0 0 16px; font-size: 1rem; font-weight: 700;">Auberge La Canebière</span>
+                    <span class="rentalcard__subheading" style="margin:6px 0 0 16px; font-size: 0.875rem; font-weight: 400;">Nuit à partir de 25<span style="font-weight: 600;">€</span></span><!-- weight € a modifier-->
+                    <div style="display:flex;height:12px; gap:2px; margin:8px 0 0 16px;">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/greystar.svg">
+                    </div>
+                </div>
+            </a>
+            <a class="link" href="#">  <!-- CARD -->
+                <div>
+                    <img class="card-img" src="./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"/>
+                    <span style="margin:6px 0 0 16px; font-size: 1rem; font-weight: 700;">Hôtel du port</span>
+                    <span style="margin:6px 0 0 16px; font-size: 0.875rem; font-weight: 400;">Nuit à partir de 52<span style="font-weight: 600;">€</span></span><!-- weight € a modifier-->
+                    <div style="display:flex;height:12px; gap:2px; margin:8px 0 0 16px;">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/greystar.svg">
+                    </div>
+                </div>
+            </a>
+            <a class="link" href="#">  <!-- CARD -->
+                <div>
+                    <img class="card-img" src="./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"/>
+                    <span style="margin:6px 0 0 16px; font-size: 1rem; font-weight: 700;">Hôtel Les mouettes</span>
+                    <span style="margin:6px 0 0 16px; font-size: 0.875rem; font-weight: 400;">Nuit à partir de 76<span style="font-weight: 600;">€</span></span><!-- weight € a modifier-->
+                    <div style="display:flex;height:12px; gap:2px; margin:8px 0 0 16px;">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/greystar.svg">
+                    </div>
+                </div>
+            </a>
+            <a class="link" href="#">  <!-- CARD -->
+                <div>
+                    <img class="card-img" src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"/>
+                    <span style="margin:6px 0 0 16px; font-size: 1rem; font-weight: 700;">Hôtel de la mer</span>
+                    <span style="margin:6px 0 0 16px; font-size: 0.875rem; font-weight: 400;">Nuit à partir de 46<span style="font-weight: 600;">€</span></span><!-- weight € a modifier-->
+                    <div style="display:flex;height:12px; gap:2px; margin:8px 0 0 16px;">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/greystar.svg">
+                    </div>
+                </div>
+            </a>
+            <a class="link" href="#">  <!-- CARD -->
+                <div>
+                    <img class="card-img" src="./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"/>
+                    <span style="margin:6px 0 0 16px; font-size: 1rem; font-weight: 700;">Auberge Le Panier</span>
+                    <span style="margin:6px 0 0 16px; font-size: 0.875rem; font-weight: 400;">Nuit à partir de 23<span style="font-weight: 600;">€</span></span><!-- weight € a modifier-->
+                    <div style="display:flex;height:12px; gap:2px; margin:8px 0 0 16px;">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/greystar.svg">
+                    </div>
+                </div>
+            </a>
+            <a class="link" href="#">  <!-- CARD -->
+                <div>
+                    <img class="card-img" src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"/>
+                    <span style="margin:6px 0 0 16px; font-size: 1rem; font-weight: 700;">Hôtel Chez Amina</span>
+                    <span style="margin:6px 0 0 16px; font-size: 0.875rem; font-weight: 400;">Nuit à partir de 96<span style="font-weight: 600;">€</span></span><!-- weight € a modifier-->
+                    <div style="display:flex;height:12px; gap:2px; margin:8px 0 0 16px;">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/greystar.svg">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <h3 style="display:block; margin-top:40px;">Afficher plus</h3>
+    </div>
+
+    <div id="mostPopularRentals"><!-- article -->
+        <h2>Les plus populaires !!icon -></h2>
+        <div id="mostPopularContainer">
+            <div style="display:flex;">
+                <img style="height:100%; width:136px; object-fit: cover; border: 5px solid #FFFFFF; border-radius: 20px 0px 0px 20px;" src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">
+                <div style="width:168px; display:flex; flex-direction: column; padding-bottom:8px;">
+                    <span style="margin:14px 0 0 16px; font-size: 1rem; font-weight: 700;">Hôtel Le soleil du matin</span>
+                    <span style="margin:6px 0 0 16px; font-size: 0.875rem; font-weight: 400;">Nuit à partir de 128<span style="font-weight: 600;">€</span></span><!-- weight € a modifier-->
+                    <div style="display:flex; height:12px; gap:2px; margin:auto 0 0 16px;">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/greystar.svg">
+                    </div>    
+                </div>
+            </div>
+            <div style="display:flex;">
+                <img style="height:100%; width:136px; object-fit: cover; border: 5px solid #FFFFFF; border-radius: 20px 0px 0px 20px;" src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg">
+                <div style="width:168px; display:flex; flex-direction: column; padding-bottom:8px;">
+                    <span style="margin:14px 0 0 16px; font-size: 1rem; font-weight: 700;">Chambres d’hôtes Au cœur de l’eau</span>
+                    <span style="margin:6px 0 0 16px; font-size: 0.875rem; font-weight: 400;">Nuit à partir de 71<span style="font-weight: 600;">€</span></span><!-- weight € a modifier-->
+                    <div style="display:flex; height:12px; gap:2px; margin:auto 0 0 16px;">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/greystar.svg">
+                    </div>    
+                </div>
+            </div>
+            <div style="display:flex;">
+                <img style="height:100%; width:136px; object-fit: cover; border: 5px solid #FFFFFF; border-radius: 20px 0px 0px 20px;" src="./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg">
+                <div style="display:flex; flex-direction: column; padding-bottom:8px;">
+                    <span style="margin:14px 0 0 16px; font-size: 1rem; font-weight: 700;">Hôtel Bleu et Blanc</span>
+                    <span style="margin:6px 0 0 16px; font-size: 0.875rem; font-weight: 400;">Nuit à partir de 68<span style="font-weight: 600;">€</span></span><!-- weight € a modifier-->
+                    <div style="display:flex; height:12px; gap:2px; margin:auto 0 0 16px;">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/bluestar.svg">
+                        <img class="card__star" src="./icons/greystar.svg">
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="activities">
+    <h2>Activités à Marseille</h2>
+    <div id="activities-container">
+        <div class="activity-card">
+            <img class="activity-card__img" src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"/>
+            <div class="activity-card__title">Vieux port</div>
+        </div>
+        <div class="activity-card">
+            <img class="activity-card__img" src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"/>
+            <div class="activity-card__title">Fort de Pomègues</div>
+        </div>
+        <div class="activity-card">
+            <img class="activity-card__img" src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"/>
+            <div class="activity-card__title">Parc national des Calanques</div>
+        </div>
+        <div class="activity-card">
+            <img class="activity-card__img" src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"/>
+            <div class="activity-card__title">Notre-Dame-de-la-Garde</div>
+        </div>
+    </div>
+</section>
+
+<footer style="display:flex; padding:48px 0 48px 80px; gap:224px; margin-top:64px; background-color: var(--grey);">
+    <ul>
+        <li><h3>À propos</h3></li>
+        <li style="margin-top:1.5rem;"><a href="#">Fonctionnement du site</a></li>
+        <li style="margin-top:1rem;"><a href="#">Conditions générales</a></li>
+        <li style="margin-top:1rem;"><a href="#">Données et confidentialité</a></li>
+    </ul>
+    <ul>
+        <li><h3>Nos hébergements</h3></li>
+        <li class="mgtop-1_5rem"><a href="#">Charte qualité</a></li>
+        <li class="mgtop-1rem"><a href="#">Proposer votre hôtel</a></li>
+    </ul>
+    <ul>
+        <li><h3>Assistance</h3></li>
+        <li class="mgtop-1_5rem"><a href="#">Centre d’aide</a></li>
+        <li class="mgtop-1rem"><a href="#">Nous contacter</a></li>
+    </ul>
+</footer>
+    
+</body>
+</html>
