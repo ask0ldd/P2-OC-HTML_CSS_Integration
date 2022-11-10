@@ -27,7 +27,9 @@ a:visited {
 body {
   display: flex;
   flex-direction: column;
-  max-width: 1340px;
+  /*max-width: 1340px;*/
+  max-width: 1400px;
+  padding: 0 30px;
   background-color: #fff;
   margin: 0 auto;
   font-family: "Raleway", sans-serif;
@@ -37,16 +39,18 @@ body {
 
 /* --- Global --- */
 
-h2 {
-  font-size: 1.375rem;
+h2,
+h3 {
   font-weight: 700;
   letter-spacing: -0.5px;
 }
 
+h2 {
+  font-size: 1.375rem;
+}
+
 h3 {
   font-size: 1.125rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
 }
 
 /* --- Margins --- */
@@ -135,12 +139,12 @@ nav > div > a:hover:after {
 /* --- filters Section --- */
 
 .filter__button {
-  margin-left: 2rem; /*use gap on parent instead */
+  /*margin-left: 2rem; use gap on parent instead */
   border: 2px solid var(--grey2);
   display: flex;
   /*justify-content: center;*/
   align-items: center;
-  padding: 12px 20px;
+  padding: 10px 20px;
   border-radius: 25px;
 }
 
@@ -151,6 +155,7 @@ nav > div > a:hover:after {
   margin-top: 2rem;
   font-weight: 700;
   flex-wrap: wrap;
+  column-gap: 2rem;
 }
 
 .filter__text {
@@ -187,7 +192,7 @@ nav > div > a:hover:after {
 
 /* --- searchResults Section --- */
 
-.rentalsResults {
+.rentals {
   margin-top: 32px;
   display: flex;
   flex-direction: row;
@@ -195,7 +200,14 @@ nav > div > a:hover:after {
   flex-wrap: wrap;
 }
 
-#rentals__container {
+.rentals__container {
+  padding: 40px 40px 40px 40px;
+  width: 880px;
+  background-color: var(--grey);
+  border-radius: 20px;
+}
+
+.rental__cardscontainer {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -207,7 +219,7 @@ nav > div > a:hover:after {
   /*padding:0px 32px 0px 32px;*/
 }
 
-#rentals__container > a > div {
+.rentalcard {
   background-color: #fff;
   width: 246px;
   border-radius: 20px;
@@ -229,8 +241,12 @@ nav > div > a:hover:after {
   font-weight: 400;
 }
 
+.euro-semibold {
+  font-weight: 600;
+}
+
 /*improvements*/
-#rentals__container > a > div:hover {
+.rentalcard:hover {
   filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.2));
 }
 /*end*/
@@ -255,14 +271,14 @@ nav > div > a:hover:after {
   width: auto;
 }
 
-#mostPopularRentals {
+.popular {
   padding: 40px 40px 40px 40px;
   width: 420px;
   background-color: var(--grey);
   border-radius: 20px;
 }
 
-#popular__container {
+.popular__cardscontainer {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -274,7 +290,8 @@ nav > div > a:hover:after {
   /*padding:0px 32px 0px 32px;*/
 }
 
-#popular__container > div {
+.popularcard {
+  display: flex;
   background-color: #fff;
   width: 340px;
   border-radius: 20px;
@@ -282,13 +299,28 @@ nav > div > a:hover:after {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
+.popularcard__img {
+  height: 100%;
+  width: 136px;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.popular__stars__container {
+  display: flex;
+  height: 12px;
+  gap: 2px;
+  margin: auto 0 0 16px;
+}
+
 /*-- activities --*/
 
-#activities {
+.activities {
   margin-top: 60px;
 }
 
-#activities-container {
+.activities__cardscontainer {
   display: flex;
   /*background-color: #0065FC;*/
   justify-content: space-between;
@@ -296,23 +328,24 @@ nav > div > a:hover:after {
   flex-wrap: wrap;
 }
 
-.activity-card {
+.activities__card {
   display: flex;
   flex-direction: column;
   width: 302px;
   height: 444px;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  /*box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);*/
 }
 
-.activity-card__img {
+.activities__card__img {
   width: 100%;
   height: 388px;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
 
-.activity-card__title {
+.activities__card__heading {
   width: 100%;
   height: 56px;
   border-radius: 0px 0px 20px 20px;
@@ -322,7 +355,35 @@ nav > div > a:hover:after {
   padding: 20px 0 0 16px;
 }
 
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 48px 0 48px 80px;
+  column-gap: 224px;
+  margin-top: 64px;
+  background-color: var(--grey);
+}
+
 @media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  .popular {
+    padding: 32px 24px 48px 24px;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .popular__cardscontainer {
+    row-gap: 16px;
+  }
+
+  .popularcard {
+    width: 100%;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1));
+  }
+
   .filter-container {
     padding: 0 24px 0 24px;
   }
@@ -384,10 +445,31 @@ nav > div > a:hover:after {
 
   #infoBar img {
     align-self: flex-start;
-    margin-top: -2px;
+    margin-top: -3px;
   }
 
   #infoBar {
     line-height: 1.25rem;
+  }
+
+  .rentals {
+    flex-direction: column-reverse;
+  }
+
+  .rentals__container {
+    padding: 32px 24px 40px 24px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0;
+  }
+
+  .rental__cardscontainer {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .rentalcard {
+    width: 100%;
+    filter: drop-shadow(0px 3px 9px rgba(0, 0, 0, 0.15));
   }
 }
