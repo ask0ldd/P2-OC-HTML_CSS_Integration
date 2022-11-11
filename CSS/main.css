@@ -196,12 +196,16 @@ nav > div > a:hover:after {
   margin-top: 32px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  justify-content: center;
+  column-gap: 40px;
   flex-wrap: wrap;
+  row-gap: 56px;
 }
 
 .rentals__container {
   padding: 40px 40px 40px 40px;
+  /*flex: 1 0 880px;*/
   width: 880px;
   background-color: var(--grey);
   border-radius: 20px;
@@ -213,7 +217,8 @@ nav > div > a:hover:after {
   flex-direction: row;
   flex-wrap: wrap;
   /*background-color: red;*/
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  column-gap: 30px;
   row-gap: 32px;
   margin-top: 24px;
   /*padding:0px 32px 0px 32px;*/
@@ -221,12 +226,16 @@ nav > div > a:hover:after {
 
 .rentalcard {
   background-color: #fff;
-  width: 246px;
   border-radius: 20px;
   height: 200px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   display: flex;
   flex-direction: column;
+  width: 246px;
+  flex-shrink: 1;
+  /*flex: 1 1 200px;
+  max-width: 246px;
+  min-width: 200px;*/
 }
 
 .rentalcard__heading {
@@ -246,7 +255,9 @@ nav > div > a:hover:after {
 }
 
 /*improvements*/
-.rentalcard:hover {
+.rentalcard:hover,
+.popular__card:hover,
+.activities__card:hover {
   filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.2));
 }
 /*end*/
@@ -271,11 +282,18 @@ nav > div > a:hover:after {
   width: auto;
 }
 
+.more__rentals {
+  display: block;
+  margin-top: 40px;
+}
+
 .popular {
   padding: 40px 40px 40px 40px;
-  width: 420px;
+  /*width: 420px;*/
   background-color: var(--grey);
   border-radius: 20px;
+  flex: 1 0 420px;
+  /*flex-grow: 1;*/
 }
 
 .popular__cardscontainer {
@@ -286,25 +304,48 @@ nav > div > a:hover:after {
   /*background-color: red;*/
   justify-content: space-between;
   row-gap: 32px;
+  column-gap: 30px;
   margin-top: 24px;
   /*padding:0px 32px 0px 32px;*/
 }
 
-.popularcard {
+.popular__card {
   display: flex;
   background-color: #fff;
   width: 340px;
   border-radius: 20px;
   height: 144px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  /*flex-shrink: 1;*/
 }
 
-.popularcard__img {
+.popular__card__img {
   height: 100%;
   width: 136px;
   object-fit: cover;
   border: 5px solid #ffffff;
   border-radius: 20px 0px 0px 20px;
+  /*flex-shrink: 1;*/
+}
+
+.popular__card__datascontainer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8px;
+  /*flex-shrink: 1;*/
+}
+
+.popular__card__heading {
+  margin: 14px 0 0 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  /*flex-shrink: 1;*/
+}
+
+.popular__card__subheading {
+  margin: 6px 0 0 16px;
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 
 .popular__stars__container {
@@ -320,22 +361,31 @@ nav > div > a:hover:after {
   margin-top: 60px;
 }
 
+h2 br {
+  display: none;
+}
+
 .activities__cardscontainer {
   display: flex;
   /*background-color: #0065FC;*/
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  column-gap: 44px;
   margin-top: 24px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .activities__card {
   display: flex;
   flex-direction: column;
-  width: 302px;
+  /*width: 302px;*/
+  flex: 1 1 302px;
   height: 444px;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   /*box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);*/
+  background-size: cover;
+  background-position: center;
+  /*overflow: hidden;*/
 }
 
 .activities__card__img {
@@ -348,20 +398,71 @@ nav > div > a:hover:after {
 .activities__card__heading {
   width: 100%;
   height: 56px;
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 0px 0px 18px 18px;
   background-color: #fff;
   font-size: 1rem;
   font-weight: 700;
-  padding: 20px 0 0 16px;
+  padding: 0 0 0 16px;
+  display: flex;
+  align-items: center;
+  /*position: absolute;*/
+  /*bottom: 0;*/
+  margin-top: auto;
+  /*display: none;*/
+}
+
+.bg__image1 {
+  background-image: url("../images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg");
+}
+
+.bg__image2 {
+  background-image: url("../images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg");
+}
+
+.bg__image3 {
+  background-image: url("../images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");
+}
+
+.bg__image4 {
+  background-image: url("../images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg");
 }
 
 footer {
   display: flex;
-  flex-wrap: wrap;
-  padding: 48px 0 48px 80px;
-  column-gap: 224px;
+  /*flex-wrap: wrap;*/
+  padding: 48px 0px 48px 80px;
+  /*column-gap: 224px;*/
+  /*justify-content: space-around;*/
+  justify-content: space-between;
   margin-top: 64px;
   background-color: var(--grey);
+}
+
+footer ul {
+  width: 25%;
+  /*background-color: red;*/
+}
+
+@media (max-width: 992px) {
+  .activities__card {
+    height: 268px;
+  }
+
+  footer {
+    padding-left: 32px;
+  }
+
+  .rental__cardscontainer div {
+    flex-shrink: 1;
+  }
+
+  /*.popular {
+    width: 100%;
+  }*/
+
+  .popular__cardscontainer {
+    flex-direction: row;
+  }
 }
 
 @media (max-width: 768px) {
@@ -379,7 +480,7 @@ footer {
     row-gap: 16px;
   }
 
-  .popularcard {
+  .popular__card {
     width: 100%;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1));
   }
@@ -454,6 +555,7 @@ footer {
 
   .rentals {
     flex-direction: column-reverse;
+    row-gap: 0px;
   }
 
   .rentals__container {
@@ -471,5 +573,44 @@ footer {
   .rentalcard {
     width: 100%;
     filter: drop-shadow(0px 3px 9px rgba(0, 0, 0, 0.15));
+  }
+
+  .more__rentals {
+    display: none;
+  }
+
+  .activities {
+    padding: 0px 24px 0px 24px;
+  }
+
+  .activities__cardscontainer {
+    row-gap: 24px;
+    /*flex-wrap: nowrap;*/
+    flex-direction: column;
+  }
+
+  .activities__card {
+    height: 190px;
+    flex: auto;
+    width: 100%;
+    filter: drop-shadow(0px 3px 9px rgba(0, 0, 0, 0.15));
+  }
+
+  .activities__card__img {
+    height: 134px;
+  }
+
+  h2 br {
+    display: inline;
+  }
+
+  footer {
+    margin-top: 80px;
+    row-gap: 40px;
+    flex-direction: column;
+  }
+
+  footer ul {
+    width: 100%;
   }
 }
