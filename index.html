@@ -17,13 +17,13 @@
 
 
 <!-- HEADER -->
-    
+
 <header>
 
 
     <!-- LOGO --> 
     <div class="logo">
-        <img src="./images/logo/Booki.png" alt="booki-logo"><!--link sur image-->
+        <a href="#"><img src="./images/logo/Booki.png" alt="booki-logo"></a><!--link sur image-->
     </div>
 
 
@@ -40,15 +40,15 @@
 
 <!-- FILTERS SECTION --> 
 
-<main class="filter-container">
+<main class="filter__maincontainer">
     <h2 class="mgtop-2rem">Trouvez votre hébergement pour des vacances de rêve</h2> <!-- h2 being by default closest to the size on the mockup-->
-    <span class="filter__innercity__subheading" style="display:block; line-height:2.5rem;">En plein centre-ville ou en pleine nature</span>
-    <div id="search__location__container">
-        <div class="search__button__location" style="background-color:var(--grey); border-radius: 15px 0px 0px 15px; width:48px;display:flex; justify-content:center; align-items: center;"><i class="fa-solid fa-location-dot" style="font-size:1.2rem;"></i></div>
-        <div class="search__textinput">Marseille, France</div>
-        <div class="btn-icon"><i class="fa-solid fa-magnifying-glass"></i></div><!--renommer classes-->
-        <div class="btn-text">Rechercher</div><!--renommer classes-->
-    </div>
+    <span class="filter__innercity__subheading">En plein centre-ville ou en pleine nature</span>
+    <form method="post" action="#" id="form__search__location">
+        <div class="search__location_iconcontainer"><i class="fa-solid fa-location-dot icon--size19"></i></div>
+        <input type="search" placeholder="Marseille, France" class="search__textinput">
+        <button type="submit" disabled class="btn-icon"><i class="fa-solid fa-magnifying-glass"></i></button><!--renommer classes-->
+        <button type="submit" disabled class="btn-text">Rechercher</button><!--renommer classes-->
+    </form>
     <div class="filter__bar"> <!--- remplacer par formulaire -->
         <div class="filter__text">Filtres</div><!--h3 -->
         <div class="filter__button"><i class="fa-solid fa-money-bill-wave icon--size19"></i>Économique</div><!-- checkboxes-->
@@ -175,7 +175,7 @@
                 </article>
             </a>
         </div>
-        <h3 class="more__rentals">Afficher plus</h3>
+        <h3 class="more__rentals"><a href="#">Afficher plus</a></h3>
     </div>
 
 
@@ -183,7 +183,7 @@
     <!-- POPULAR SECTION -->
 
     <div class="popular"><!-- article -->
-        <h2>Les plus populaires <i class="fa-solid fa-chart-line" style="font-size:1rem; color:var(--blue); margin-left:13px;"></i></h2>
+        <h2 style="display:flex; justify-content:space-between;">Les plus populaires<i class="fa-solid fa-chart-line icon__growth icon--size16"></i></h2>
         <div class="popular__cardscontainer">
 
 
@@ -289,6 +289,10 @@
         </a>
     </div>
 </section>
+
+
+
+<!-- FOOTER --> 
 
 <footer>
     <ul>

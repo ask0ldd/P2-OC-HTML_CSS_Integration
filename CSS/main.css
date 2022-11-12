@@ -1,6 +1,10 @@
 /* TODO shorthand padding margin
-elever les divers autour des <a> dans nav
+elever les divs autour des <a> dans nav
 */
+
+/* --- 
+RESET --- 
+--- */
 
 *,
 *::before,
@@ -39,10 +43,15 @@ body {
 
 /* --- Global --- */
 
+h1,
 h2,
 h3 {
   font-weight: 700;
   letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 1.375rem;
 }
 
 h2 {
@@ -51,6 +60,11 @@ h2 {
 
 h3 {
   font-size: 1.125rem;
+}
+
+::placeholder {
+  color: #000;
+  opacity: 1;
 }
 
 .icon--size12 {
@@ -83,6 +97,13 @@ h3 {
 
 .icon--grey {
   color: var(--grey);
+}
+
+.icon__growth {
+  color: var(--blue);
+  margin-left: 13px;
+  display: block;
+  margin-top: 7px;
 }
 
 /* --- Margins --- */
@@ -161,7 +182,17 @@ nav > div > a:hover:after {
 FORM 
 ---*/
 
-#search__location__container {
+.search__location_iconcontainer {
+  background-color: var(--grey);
+  border-radius: 15px 0px 0px 15px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 23px 0px 24px;
+}
+
+#form__search__location {
   max-width: 424px;
   height: 48px;
   display: flex;
@@ -173,13 +204,49 @@ FORM
   flex-grow: 1;
   display: flex;
   font-size: 1.125rem;
+  border: none;
   border: solid var(--grey);
   border-width: 1px 0px 1px 0px;
   align-items: center;
   font-weight: 700;
+  border-radius: 0;
+  color: #000;
+}
+
+.search__textinput:focus {
+  color: #000;
+  border: none;
+  outline: none;
+  border: 1px solid var(--blue);
+}
+
+.btn-icon,
+.btn-text {
+  background-color: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 0px 24px 0px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 0px 15px 15px 0px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.btn-icon {
+  display: none;
+  padding: 0px 16px 0px 16px;
 }
 
 /* --- filters Section --- */
+
+.filter__innercity__subheading {
+  display: block;
+  line-height: 2.5rem;
+}
 
 .filter__button {
   border: 2px solid var(--grey2);
@@ -187,6 +254,7 @@ FORM
   align-items: center;
   padding: 10px 16px;
   border-radius: 25px;
+  cursor: pointer;
 }
 
 .filter__button i {
@@ -210,25 +278,6 @@ FORM
 
 .filter__button:hover {
   background-color: var(--lightblue);
-}
-
-.btn-icon,
-.btn-text {
-  background-color: var(--blue);
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.125rem;
-  padding: 0px 24px 0px 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0px 15px 15px 0px;
-  letter-spacing: 0.5px;
-}
-
-.btn-icon {
-  display: none;
-  padding: 0px 16px 0px 16px;
 }
 
 #infoBar {
@@ -277,7 +326,8 @@ FORM
   background-color: #fff;
   border-radius: 20px;
   height: 100%;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  /*filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));*/
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
   /*flex: 1 0;*/
   /*min-width: 246px;
   max-width: 600px;*/
@@ -306,7 +356,7 @@ FORM
 .rentalcard:hover,
 .popular__card:hover,
 .activities__card:hover {
-  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.2));
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.18);
 }
 /*end*/
 
@@ -365,7 +415,7 @@ FORM
   background-color: #fff;
   border-radius: 20px;
   /*height: 144px;*/
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
   /*flex: 1 1 340px;
   min-width: 240px;*/
   /*width: 100%;*/
@@ -440,7 +490,7 @@ h2 br {
   height: 444px;*/
   height: 100%;
   border-radius: 20px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
   background-size: cover;
   background-position: center;
 }
@@ -535,10 +585,12 @@ footer ul {
 
   .popular__card__heading {
     font-size: 0.875rem;
+    line-height: 1.15rem;
   }
 
   .popular__card__subheading {
     font-size: 0.8125rem;
+    line-height: 1.15rem;
   }
 
   /*.popular__card__img {
@@ -558,7 +610,7 @@ footer ul {
     padding: 0;
   }
 
-  #search__location__container {
+  #form__search__location {
     max-width: 100%;
   }
 
@@ -566,7 +618,7 @@ footer ul {
     width: 100%;
   }
 
-  .filter-container {
+  .filter__maincontainer {
     padding: 0 24px 0 24px;
   }
 
@@ -664,7 +716,7 @@ footer ul {
   }
 
   .rentalcard {
-    filter: drop-shadow(0px 3px 9px rgba(0, 0, 0, 0.15));
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.1);
   }
 
   .more__rentals {
@@ -695,7 +747,7 @@ footer ul {
 
   .popular__card {
     /*width: 100%;*/
-    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1));
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
     height: 100%;
   }
 
@@ -715,7 +767,7 @@ footer ul {
   }
 
   .activities__card {
-    filter: drop-shadow(0px 3px 9px rgba(0, 0, 0, 0.15));
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.1);
   }
 
   .activities__card__img {
