@@ -72,29 +72,20 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  /*height: 96px;*/
-  /*background-color: red;*/
   flex-wrap: wrap;
 }
 
 .logo {
-  /*height: 100%;*/
-  /*width: 80px;*/
-  /*margin-top: 35px;*/
-  /*background-color: yellow;*/
   align-self: center;
   margin-top: -5px;
 }
 
 .logo img {
   height: 20px;
-  /*background-color: green;*/
-  /*width:auto;*/
 }
 
 nav {
   height: 96px;
-  /*background-color: green;*/
   display: flex;
   font-weight: 500;
 }
@@ -127,35 +118,30 @@ nav > div > a:after {
 }
 
 nav > div > a:hover {
-  /*width: 100%;*/
   color: var(--blue);
 }
 
 nav > div > a:hover:after {
-  /*width: 100%;*/
   display: block;
 }
 
 /* --- filters Section --- */
 
 .filter__button {
-  /*margin-left: 2rem; use gap on parent instead */
   border: 2px solid var(--grey2);
   display: flex;
-  /*justify-content: center;*/
   align-items: center;
   padding: 10px 20px;
   border-radius: 25px;
 }
 
 .filter__bar {
-  /*background-color: green;*/
-  /*height: 48px;*/
   display: flex;
   margin-top: 2rem;
   font-weight: 700;
   flex-wrap: wrap;
   column-gap: 2rem;
+  row-gap: 1rem;
 }
 
 .filter__text {
@@ -196,16 +182,14 @@ nav > div > a:hover:after {
   margin-top: 32px;
   display: flex;
   flex-direction: row;
-  /*justify-content: space-between;*/
   justify-content: center;
   column-gap: 40px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   row-gap: 56px;
 }
 
 .rentals__container {
   padding: 40px 40px 40px 40px;
-  /*flex: 1 0 880px;*/
   width: 880px;
   background-color: var(--grey);
   border-radius: 20px;
@@ -216,26 +200,29 @@ nav > div > a:hover:after {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /*background-color: red;*/
-  /*justify-content: space-between;*/
   column-gap: 30px;
   row-gap: 32px;
   margin-top: 24px;
-  /*padding:0px 32px 0px 32px;*/
+}
+
+.rental__cardscontainer a {
+  flex: 1 0;
+  min-width: 246px;
+  max-width: 600px;
+  height: 200px;
 }
 
 .rentalcard {
   background-color: #fff;
   border-radius: 20px;
-  height: 200px;
+  height: 100%;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  /*flex: 1 0;*/
+  /*min-width: 246px;
+  max-width: 600px;*/
+  /*width: 100%;*/
   display: flex;
   flex-direction: column;
-  width: 246px;
-  flex-shrink: 1;
-  /*flex: 1 1 200px;
-  max-width: 246px;
-  min-width: 200px;*/
 }
 
 .rentalcard__heading {
@@ -289,11 +276,9 @@ nav > div > a:hover:after {
 
 .popular {
   padding: 40px 40px 40px 40px;
-  /*width: 420px;*/
   background-color: var(--grey);
   border-radius: 20px;
-  flex: 1 0 420px;
-  /*flex-grow: 1;*/
+  flex: 1 1 420px;
 }
 
 .popular__cardscontainer {
@@ -301,7 +286,6 @@ nav > div > a:hover:after {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /*background-color: red;*/
   justify-content: space-between;
   row-gap: 32px;
   column-gap: 30px;
@@ -309,37 +293,46 @@ nav > div > a:hover:after {
   /*padding:0px 32px 0px 32px;*/
 }
 
+.popular__cardscontainer a {
+  flex: 1 1 340px;
+  min-width: 240px;
+  height: 144px;
+}
+
 .popular__card {
   display: flex;
   background-color: #fff;
-  width: 340px;
   border-radius: 20px;
-  height: 144px;
+  /*height: 144px;*/
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  /*flex-shrink: 1;*/
+  /*flex: 1 1 340px;
+  min-width: 240px;*/
+  /*width: 100%;*/
+  height: 100%;
 }
 
 .popular__card__img {
   height: 100%;
-  width: 136px;
   object-fit: cover;
   border: 5px solid #ffffff;
   border-radius: 20px 0px 0px 20px;
-  /*flex-shrink: 1;*/
+  flex: 0 1 136px;
+  max-width: 136px;
 }
 
 .popular__card__datascontainer {
   display: flex;
   flex-direction: column;
   padding-bottom: 8px;
-  /*flex-shrink: 1;*/
+  flex: 0 1 150px;
+  min-width: 150px;
+  padding-right: 14px;
 }
 
 .popular__card__heading {
   margin: 14px 0 0 16px;
   font-size: 1rem;
   font-weight: 700;
-  /*flex-shrink: 1;*/
 }
 
 .popular__card__subheading {
@@ -355,7 +348,9 @@ nav > div > a:hover:after {
   margin: auto 0 0 16px;
 }
 
-/*-- activities --*/
+/*--
+ACTIVITIES----
+--*/
 
 .activities {
   margin-top: 60px;
@@ -367,8 +362,6 @@ h2 br {
 
 .activities__cardscontainer {
   display: flex;
-  /*background-color: #0065FC;*/
-  /*justify-content: space-between;*/
   column-gap: 44px;
   margin-top: 24px;
   flex-wrap: nowrap;
@@ -377,15 +370,12 @@ h2 br {
 .activities__card {
   display: flex;
   flex-direction: column;
-  /*width: 302px;*/
   flex: 1 1 302px;
   height: 444px;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  /*box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);*/
   background-size: cover;
   background-position: center;
-  /*overflow: hidden;*/
 }
 
 .activities__card__img {
@@ -396,19 +386,16 @@ h2 br {
 }
 
 .activities__card__heading {
-  width: 100%;
+  display: flex;
   height: 56px;
+  width: 100%;
   border-radius: 0px 0px 18px 18px;
   background-color: #fff;
   font-size: 1rem;
   font-weight: 700;
-  padding: 0 0 0 16px;
-  display: flex;
   align-items: center;
-  /*position: absolute;*/
-  /*bottom: 0;*/
+  padding: 0 0 0 16px;
   margin-top: auto;
-  /*display: none;*/
 }
 
 .bg__image1 {
@@ -429,10 +416,7 @@ h2 br {
 
 footer {
   display: flex;
-  /*flex-wrap: wrap;*/
   padding: 48px 0px 48px 80px;
-  /*column-gap: 224px;*/
-  /*justify-content: space-around;*/
   justify-content: space-between;
   margin-top: 64px;
   background-color: var(--grey);
@@ -440,10 +424,13 @@ footer {
 
 footer ul {
   width: 25%;
-  /*background-color: red;*/
 }
 
-@media (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
+  body {
+    padding: 0 56px;
+  }
+
   .activities__card {
     height: 268px;
   }
@@ -452,37 +439,43 @@ footer ul {
     padding-left: 32px;
   }
 
-  .rental__cardscontainer div {
-    flex-shrink: 1;
+  .rentals {
+    flex-wrap: wrap;
   }
 
-  /*.popular {
+  .rentalcard {
+    flex-grow: 1;
+  }
+
+  .popular {
     width: 100%;
-  }*/
+  }
 
   .popular__cardscontainer {
+    flex-wrap: nowrap;
     flex-direction: row;
+  }
+
+  .popular__card__datascontainer {
+    min-width: 100px;
+  }
+
+  .popular__card__heading {
+    font-size: 0.875rem;
+  }
+
+  .popular__card__subheading {
+    font-size: 0.8125rem;
+  }
+
+  .popular__card__img {
+    width: 106px;
   }
 }
 
 @media (max-width: 768px) {
   body {
     padding: 0;
-  }
-
-  .popular {
-    padding: 32px 24px 48px 24px;
-    border-radius: 0;
-    width: 100%;
-  }
-
-  .popular__cardscontainer {
-    row-gap: 16px;
-  }
-
-  .popular__card {
-    width: 100%;
-    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1));
   }
 
   .filter-container {
@@ -501,7 +494,6 @@ footer ul {
   .filter__button {
     margin: 0;
     padding: 12px 12px;
-    /*flex-grow: 1;*/
     width: calc(50% - 10px);
     font-size: 12px;
   }
@@ -570,13 +562,37 @@ footer ul {
     row-gap: 16px;
   }
 
-  .rentalcard {
+  .rental__cardscontainer a {
     width: 100%;
+    flex: 0 0 200px;
+  }
+
+  .rentalcard {
     filter: drop-shadow(0px 3px 9px rgba(0, 0, 0, 0.15));
   }
 
   .more__rentals {
     display: none;
+  }
+
+  .popular {
+    padding: 32px 24px 48px 24px;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .popular__cardscontainer {
+    row-gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .popular__card__datascontainer {
+    flex-grow: 1;
+  }
+
+  .popular__card {
+    /*width: 100%;*/
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1));
   }
 
   .activities {
@@ -585,7 +601,6 @@ footer ul {
 
   .activities__cardscontainer {
     row-gap: 24px;
-    /*flex-wrap: nowrap;*/
     flex-direction: column;
   }
 
