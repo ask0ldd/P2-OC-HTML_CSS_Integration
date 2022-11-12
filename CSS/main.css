@@ -1,10 +1,8 @@
-/* TODO shorthand padding margin
-elever les divs autour des <a> dans nav
-*/
-
-/* --- 
-RESET --- 
---- */
+/*---
+------
+RESET---
+------
+---*/
 
 *,
 *::before,
@@ -15,6 +13,12 @@ RESET ---
   text-decoration: none;
   list-style: none;
 }
+
+/*---
+------
+VARS---
+------
+---*/
 
 :root {
   --blue: #0065fc; /* vars */
@@ -27,6 +31,12 @@ a,
 a:visited {
   color: #000;
 }
+
+/*---
+------
+BODY---
+------
+---*/
 
 body {
   display: flex;
@@ -41,7 +51,11 @@ body {
   color: #000;
 }
 
-/* --- Global --- */
+/*---
+------
+HX  ---
+------
+---*/
 
 h1,
 h2,
@@ -66,6 +80,12 @@ h3 {
 h4 {
   font-size: 1rem;
 }
+
+/*---
+------
+ICONS---
+------
+---*/
 
 .icon--size10 {
   font-size: 10px;
@@ -110,7 +130,12 @@ h4 {
   margin-top: 6px;
 }
 
-/* --- Margins --- */
+/*---
+------
+MARGINS---
+------
+---*/
+
 .mgtop-2rem {
   margin-top: 2rem;
 }
@@ -123,7 +148,11 @@ h4 {
   margin-top: 1rem;
 }
 
-/* --- Header --- */
+/*---
+------
+HEADER---
+------
+---*/
 
 header {
   display: flex;
@@ -131,6 +160,12 @@ header {
   width: 100%;
   flex-wrap: wrap;
 }
+
+/*---
+------
+LOGO---
+------
+---*/
 
 .logo {
   align-self: center;
@@ -140,6 +175,12 @@ header {
 .logo img {
   height: 20px;
 }
+
+/*---
+------
+NAV ---
+------
+---*/
 
 nav {
   height: 96px;
@@ -163,7 +204,6 @@ nav a {
 }
 
 nav > div > a:after {
-  /* pseudo-element (absolute in a relative div) */
   content: "";
   position: absolute;
   background-color: var(--blue);
@@ -182,8 +222,10 @@ nav > div > a:hover:after {
   display: block;
 }
 
-/* --- 
-FORM 
+/*---
+------
+FORM---
+------
 ---*/
 
 .search__location_iconcontainer {
@@ -202,6 +244,12 @@ FORM
   display: flex;
   margin-top: 0.5rem;
 }
+
+/*---
+------
+SEARCHBAR---
+------
+---*/
 
 .search__textinput {
   padding: 0px 24px;
@@ -227,6 +275,7 @@ FORM
 ::placeholder {
   color: #000;
   opacity: 1;
+  font-family: "Raleway", sans-serif;
 }
 
 .search__textinput:focus::placeholder {
@@ -247,6 +296,7 @@ FORM
   border-radius: 0px 15px 15px 0px;
   letter-spacing: 0.5px;
   cursor: pointer;
+  font-family: "Raleway", sans-serif;
 }
 
 .btn-icon {
@@ -254,7 +304,11 @@ FORM
   padding: 0px 16px 0px 16px;
 }
 
-/* --- filters Section --- */
+/*---
+------
+FILTER---
+------
+---*/
 
 .filter__innercity__subheading {
   display: block;
@@ -293,6 +347,12 @@ FORM
   background-color: var(--lightblue);
 }
 
+/*---
+------
+INFO---
+------
+---*/
+
 #info__line {
   display: flex;
   line-height: 2rem;
@@ -316,7 +376,11 @@ FORM
   justify-content: center;
 }
 
-/* --- searchResults Section --- */
+/*---
+------
+RENTAL---
+------
+---*/
 
 .rentals {
   margin-top: 32px;
@@ -348,7 +412,6 @@ FORM
 .rental__cardscontainer a {
   flex: 1 0;
   min-width: 246px;
-  /*max-width: 800px;*/
   height: 200px;
 }
 
@@ -356,12 +419,7 @@ FORM
   background-color: #fff;
   border-radius: 20px;
   height: 100%;
-  /*filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));*/
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-  /*flex: 1 0;*/
-  /*min-width: 246px;
-  max-width: 600px;*/
-  /*width: 100%;*/
   display: flex;
   flex-direction: column;
 }
@@ -382,13 +440,11 @@ FORM
   font-weight: 600;
 }
 
-/*improvements*/
 .rentalcard:hover,
 .popular__card:hover,
 .activities__card:hover {
   box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.18);
 }
-/*end*/
 
 .rentalcard__img {
   width: 100%;
@@ -415,6 +471,12 @@ FORM
   margin-top: 40px;
 }
 
+/*---
+------
+POPULAR---
+------
+---*/
+
 .popular {
   padding: 40px 40px 40px 40px;
   background-color: var(--grey);
@@ -431,7 +493,6 @@ FORM
   row-gap: 32px;
   column-gap: 30px;
   margin-top: 24px;
-  /*padding:0px 32px 0px 32px;*/
 }
 
 .popular__cardscontainer a {
@@ -444,11 +505,7 @@ FORM
   display: flex;
   background-color: #fff;
   border-radius: 20px;
-  /*height: 144px;*/
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-  /*flex: 1 1 340px;
-  min-width: 240px;*/
-  /*width: 100%;*/
   height: 100%;
 }
 
@@ -457,7 +514,6 @@ FORM
   object-fit: cover;
   border: 5px solid #ffffff;
   border-radius: 20px 0px 0px 20px;
-  /*flex: 0 1 136px;*/
   max-width: 136px;
   min-width: 136px;
 }
@@ -489,15 +545,17 @@ FORM
   margin: auto 0 0 0px;
 }
 
-/*--
-ACTIVITIES----
---*/
+/*---
+------
+ACTIVITIES---
+------
+---*/
 
 .activities {
   margin-top: 60px;
 }
 
-h1 br {
+h2 br {
   display: none;
 }
 
@@ -516,8 +574,6 @@ h1 br {
 .activities__card {
   display: flex;
   flex-direction: column;
-  /*flex: 1 1 302px;
-  height: 444px;*/
   height: 100%;
   border-radius: 20px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
@@ -561,6 +617,12 @@ h1 br {
   background-image: url("../images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg");
 }
 
+/*---
+------
+FOOTER---
+------
+---*/
+
 footer {
   display: flex;
   padding: 48px 0px 48px 80px;
@@ -573,7 +635,13 @@ footer ul {
   width: 25%;
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
+/*---
+------
+TABLET---
+------
+---*/
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
   body {
     padding: 0 56px;
   }
@@ -601,7 +669,6 @@ footer ul {
   .popular__cardscontainer {
     flex-wrap: wrap;
     flex-direction: row;
-    /*gap: 0px;*/
   }
 
   .popular__cardscontainer a {
@@ -623,19 +690,19 @@ footer ul {
     line-height: 1.15rem;
   }
 
-  /*.popular__card__img {
-    width: 106px;
-  }*/
-
   .popular__card__img {
-    /*flex: 0 1 106px;*/
     max-width: 106px;
     min-width: 106px;
-    /*width: 106px;*/
   }
 }
 
-@media (max-width: 768px) {
+/*---
+------
+CELLPHONE---
+------
+---*/
+
+@media screen and (max-width: 768px) {
   body {
     padding: 0;
   }
@@ -698,14 +765,7 @@ footer ul {
   nav a {
     display: flex;
     justify-content: center;
-    /*color: var(--blue);*/
   }
-
-  /*nav a:visited {
-    display: flex;
-    justify-content: center;
-    color: var(--blue);
-  }*/
 
   nav > div > a:after {
     top: 64px;
@@ -716,7 +776,6 @@ footer ul {
 
   #info__icon__container {
     align-self: flex-start;
-    /*margin-top: -3px;*/
     flex-shrink: 0;
     transform: translateY(-6px);
   }
@@ -782,7 +841,6 @@ footer ul {
   }
 
   .popular__card {
-    /*width: 100%;*/
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
     height: 100%;
   }
