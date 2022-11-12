@@ -208,7 +208,7 @@ nav > div > a:hover:after {
 .rental__cardscontainer a {
   flex: 1 0;
   min-width: 246px;
-  max-width: 600px;
+  /*max-width: 800px;*/
   height: 200px;
 }
 
@@ -318,25 +318,25 @@ nav > div > a:hover:after {
   border-radius: 20px 0px 0px 20px;
   flex: 0 1 136px;
   max-width: 136px;
+  min-width: 136px;
 }
 
 .popular__card__datascontainer {
   display: flex;
   flex-direction: column;
-  padding-bottom: 8px;
-  flex: 0 1 150px;
+  padding: 0 14px 8px 14px;
+  flex: 0 1 200px;
   min-width: 150px;
-  padding-right: 14px;
 }
 
 .popular__card__heading {
-  margin: 14px 0 0 16px;
+  margin: 14px 0 0 0px;
   font-size: 1rem;
   font-weight: 700;
 }
 
 .popular__card__subheading {
-  margin: 6px 0 0 16px;
+  margin: 6px 0 0 0px;
   font-size: 0.875rem;
   font-weight: 400;
 }
@@ -345,7 +345,7 @@ nav > div > a:hover:after {
   display: flex;
   height: 12px;
   gap: 2px;
-  margin: auto 0 0 16px;
+  margin: auto 0 0 0px;
 }
 
 /*--
@@ -367,11 +367,17 @@ h2 br {
   flex-wrap: nowrap;
 }
 
+.activities__cardscontainer a {
+  flex: 1 1 302px;
+  height: 444px;
+}
+
 .activities__card {
   display: flex;
   flex-direction: column;
-  flex: 1 1 302px;
-  height: 444px;
+  /*flex: 1 1 302px;
+  height: 444px;*/
+  height: 100%;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   background-size: cover;
@@ -431,7 +437,7 @@ footer ul {
     padding: 0 56px;
   }
 
-  .activities__card {
+  .activities__cardscontainer a {
     height: 268px;
   }
 
@@ -452,8 +458,14 @@ footer ul {
   }
 
   .popular__cardscontainer {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
+    /*gap: 0px;*/
+  }
+
+  .popular__cardscontainer a {
+    flex-basis: 200px;
+    max-width: calc(50% - 16px);
   }
 
   .popular__card__datascontainer {
@@ -468,8 +480,14 @@ footer ul {
     font-size: 0.8125rem;
   }
 
-  .popular__card__img {
+  /*.popular__card__img {
     width: 106px;
+  }*/
+
+  .popular__card__img {
+    flex: 0 1 106px;
+    max-width: 106px;
+    min-width: 106px;
   }
 }
 
@@ -528,12 +546,20 @@ footer ul {
   nav a {
     display: flex;
     justify-content: center;
+    /*color: var(--blue);*/
   }
+
+  /*nav a:visited {
+    display: flex;
+    justify-content: center;
+    color: var(--blue);
+  }*/
 
   nav > div > a:after {
     top: 64px;
     height: 3px;
     display: block;
+    background-color: var(--grey);
   }
 
   #infoBar img {
@@ -604,10 +630,13 @@ footer ul {
     flex-direction: column;
   }
 
-  .activities__card {
+  .activities__cardscontainer a {
     height: 190px;
     flex: auto;
     width: 100%;
+  }
+
+  .activities__card {
     filter: drop-shadow(0px 3px 9px rgba(0, 0, 0, 0.15));
   }
 
