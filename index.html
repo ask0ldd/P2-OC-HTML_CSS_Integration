@@ -29,34 +29,33 @@
 
     <!-- NAV --> 
     <nav>
-        <div><a href="#rentals__mainheader">Hébergements</a></div><!--- <a> outside div--><!--try to suppress div-->
+        <div><a href="#rentals__mainheader">Hébergements</a></div>
         <div><a href="#activities__mainheader">Activités</a></div>
     </nav>
 
 </header>
 
 
-<!--<div style="position:absolute; top:54px; width:100%; height:2px; background-color: blue;"></div>-->
 
 <!-- FILTERS SECTION --> 
 
 <main class="filter__maincontainer">
     <h1 class="mgtop-2rem">Trouvez votre hébergement pour des vacances de rêve</h1>
     <span class="filter__innercity__subheading">En plein centre-ville ou en pleine nature</span>
-    <form id="form__search__location" method="post" action="#">
+    <form class="form__search__location" method="post" action="#">
         <div class="search__location_iconcontainer"><i class="fa-solid fa-location-dot icon--size19"></i></div>
         <input class="search__textinput" type="search" placeholder="Marseille, France">
         <button class="btn-icon" type="submit" disabled><i class="fa-solid fa-magnifying-glass"></i></button><!--renommer classes-->
         <button class="btn-text" type="submit" disabled>Rechercher</button><!--renommer classes-->
     </form>
     <div class="filter__bar">
-        <div class="filter__text">Filtres</div><!--h4 -->
-        <div class="filter__button"><i class="fa-solid fa-money-bill-wave icon--size19"></i>Économique</div><!-- checkboxes-->
+        <div class="filter__text">Filtres</div>
+        <div class="filter__button"><i class="fa-solid fa-money-bill-wave icon--size19"></i>Économique</div>
         <div class="filter__button"><i class="fa-solid fa-person icon--size19"></i>Familial</div>
         <div class="filter__button"><i class="fa-solid fa-heart icon--size19"></i>Romantique</div>
         <div class="filter__button"><i class="fa-solid fa-dog icon--size19"></i>Animaux autorisés</div>
     </div>
-    <span id="info__line"><span id="info__icon__container"><i class="fa-solid fa-info icon--size12"></i></span>Plus de 500 logements sont disponibles dans cette ville</span>
+    <span class="info__line"><span class="info__icon__container"><i class="fa-solid fa-info icon--size12"></i></span>Plus de 500 logements sont disponibles dans cette ville</span>
 </main>
 
 
@@ -164,7 +163,7 @@
                 <article class="rentalcard" >
                     <img class="rentalcard__img" alt="Hôtel Chez Amina" src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg">
                     <h4 class="rentalcard__heading">Hôtel Chez Amina</h4>
-                    <span class="rentalcard__subheading">Nuit à partir de 96<span class="euro-semibold">€</span></span><!-- weight € a modifier-->
+                    <span class="rentalcard__subheading">Nuit à partir de 96<span class="euro-semibold">€</span></span>
                     <div class="rental__stars__container">
                         <i class="fa-solid fa-star icon--size12 icon--blue"></i>
                         <i class="fa-solid fa-star icon--size12 icon--blue"></i>
@@ -183,7 +182,7 @@
     <!-- POPULAR SECTION -->
 
     <div class="popular">
-        <h2 style="display:flex; justify-content:space-between;">Les plus populaires<i class="fa-solid fa-chart-line icon__growth icon--size16"></i></h2>
+        <h2>Les plus populaires<i class="fa-solid fa-chart-line icon__growth icon--size16"></i></h2>
         <div class="popular__cardscontainer">
 
 
