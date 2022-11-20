@@ -281,8 +281,8 @@ SEARCHBAR---
   opacity: 0;
 }
 
-.btn-icon,
-.btn-text {
+.search__btn-icon,
+.search__btn-text {
   background-color: var(--blue);
   color: #fff;
   font-weight: 700;
@@ -298,7 +298,7 @@ SEARCHBAR---
   font-family: "Raleway", sans-serif;
 }
 
-.btn-icon {
+.search__btn-icon {
   display: none;
   padding: 0px 16px;
 }
@@ -729,6 +729,10 @@ TABLET---
   .filter__button {
     font-size: 14px;
   }
+
+  .activities__card__heading {
+    padding: 0 12px;
+  }
 }
 
 /*---
@@ -805,11 +809,11 @@ CELLPHONE---
     width: 100%;
   }
 
-  .btn-icon {
+  .search__btn-icon {
     display: flex;
   }
 
-  .btn-text {
+  .search__btn-text {
     display: none;
   }
 
