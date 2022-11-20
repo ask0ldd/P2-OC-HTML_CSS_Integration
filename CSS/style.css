@@ -314,26 +314,30 @@ FILTER---
   line-height: 2.5rem;
 }
 
-.filter__button {
-  border: 2px solid var(--grey2);
-  display: flex;
-  align-items: center;
-  padding: 10px 16px;
-  border-radius: 25px;
-  cursor: pointer;
-}
-
-.filter__button i {
-  margin-right: 14px;
-  color: var(--blue);
-}
-
 .filter__bar {
   display: flex;
   margin-top: 2rem;
   font-weight: 700;
   flex-wrap: wrap;
   gap: 1rem 2rem;
+}
+
+.filter__button {
+  border: 2px solid var(--grey2);
+  display: flex;
+  align-items: center;
+  padding: 11px 16px 11px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #fff;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+}
+
+.filter__button i {
+  margin-right: 12px;
+  color: var(--blue);
 }
 
 .filter__text {
@@ -641,6 +645,10 @@ TABLET---
     padding: 0 56px;
   }
 
+  .filter__bar {
+    column-gap: 20px;
+  }
+
   /*---
   ------
   RENTALS---
@@ -706,6 +714,20 @@ TABLET---
 
   footer {
     padding-left: 32px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 906px) {
+  .filter__bar {
+    column-gap: 16px;
+  }
+
+  .filter__text {
+    width: 100%;
+  }
+
+  .filter__button {
+    font-size: 14px;
   }
 }
 
