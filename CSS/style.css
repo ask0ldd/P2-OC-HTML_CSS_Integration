@@ -49,6 +49,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   color: #000;
+  font-size: 1rem;
 }
 
 /*---
@@ -187,7 +188,13 @@ nav {
   font-weight: 500;
 }
 
-nav div {
+nav ul {
+  height: 100%;
+  display: flex;
+  width: 100%;
+}
+
+nav li {
   display: flex;
   align-items: center;
 }
@@ -202,7 +209,7 @@ nav a {
   color: #000;
 }
 
-nav > div > a:after {
+nav a:after {
   content: "";
   position: absolute;
   background-color: var(--blue);
@@ -213,11 +220,11 @@ nav > div > a:after {
   height: 2px;
 }
 
-nav > div > a:hover {
+nav a:hover {
   color: var(--blue);
 }
 
-nav > div > a:hover:after {
+nav a:hover:after {
   display: block;
 }
 
@@ -765,7 +772,11 @@ CELLPHONE---
     width: 100%;
   }
 
-  nav div {
+  /*nav ul {
+    width: 100%;
+  }*/
+
+  nav li {
     width: 50%;
     display: flex;
     align-content: center;
@@ -776,22 +787,22 @@ CELLPHONE---
     justify-content: center;
   }
 
-  nav > div > a:after {
+  nav a:after {
     top: 64px;
     height: 3px;
     display: block;
     background-color: var(--grey);
   }
 
-  nav div:first-child,
-  nav div:first-child a,
-  nav div:first-child a:visited,
-  nav div:first-child a:link,
-  nav div:first-child a:hover {
+  nav li:first-child,
+  nav li:first-child a,
+  nav li:first-child a:visited,
+  nav li:first-child a:link,
+  nav li:first-child a:hover {
     color: var(--blue);
   }
 
-  nav div:first-child a:after {
+  nav li:first-child a:after {
     background-color: var(--blue);
   }
 
