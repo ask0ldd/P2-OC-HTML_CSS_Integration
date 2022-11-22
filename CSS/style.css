@@ -39,9 +39,6 @@ BODY---
 ---*/
 
 body {
-  /*display: flex;
-  flex-direction: column;*/
-  /*max-width: 1340px;*/
   max-width: 1400px;
   padding: 0 30px;
   background-color: #fff;
@@ -771,10 +768,6 @@ CELLPHONE---
     height: 64px;
     width: 100%;
   }
-
-  /*nav ul {
-    width: 100%;
-  }*/
 
   nav li {
     width: 50%;
